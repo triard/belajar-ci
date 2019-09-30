@@ -1,11 +1,9 @@
 <body>
     <div class="container">
+        <br>
         <div class="input-group mb-3">
             <form action="" method="post">
                 <input class="form-control" type="text" placeholder="Search" aria-label="Search" name="keyword">
-                <div class="input-group-append">
-                    <button class="btn btn-primary" type="submit">Cari</button>
-                </div>
             </form>
         </div>
         <?php if (empty($siswa)) : ?>
@@ -47,7 +45,5 @@
                 <?php endforeach; ?>
             </tbody>
         </table>
-
-
     </div>
 </body>

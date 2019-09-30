@@ -52,7 +52,7 @@ class siswa extends CI_Controller
         $this->session->set_flashdata('success', 'Data berhasil dihapus');
         redirect('siswa', 'refresh');
     }
-
+    
     public function detail($id = null){
         $data['title'] = 'Detail siswa';
         $data['siswa'] = $this->siswa_model->getSiswabyid($id);

@@ -44,6 +44,7 @@
         //redirect('login/index','refresh');
       }
     }
+
     public function logout(){
       $this->session->sess_destroy();
       redirect('login','refresh');
