@@ -4,22 +4,28 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 class laporan_pdf extends CI_Controller
 {
-
-    public function __construct()
-    {
-        parent::__construct();
-    }
-
-
-    public function laporan_pdf()
+    public function index()
     {
 
-        $this->load->library('pdf'); 
-        $data['mahasiswa']=$this->laporan_pdf->view();
-        
+
+                $this->load->model('laporan_model');
+        $this->load->library('pdf');
+
+        $data['mahasiswa'] = $this->laporan_model->view();
+
         $this->pdf->setPaper('A4', 'potrait');
-        $this->pdf->filename = "laporan-pdf.pdf";
-        $this->pdf->load_view('mahasiswa/laporan',$data);
+
+                $this->pdf->filename = date("FjYgias");
+        $this->pdf->load_view('mahasiswa/laporan_pdf', $data);
+
+        // $this->load->model('laporan_model');
+        // $data['siswa'] = $this->laporan_model->view();
+        // $this->load->library('pdf');  
+        // $this->pdf->setPaper('A4', 'potrait');
+        // $this->pdf->filename = date("FjYgias");
+        // $this->pdf->load_view('mahasiswa/user',$data);
+
+        
     }
 }
   
