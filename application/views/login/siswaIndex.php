@@ -25,7 +25,9 @@
                                     <div class="invalid-feedback">Enter your password too!.</div>
                                 </div>
                                 <button type="submit" class="btn btn-success btn-block mt-5"><i class="fa fa-lock" aria-hidden="true"></i>&nbsp; Login</button>
-
+                                <a class="btn btn-warning btn-block mt-5" href="<?= base_url() . 'create/'; ?>">
+                                    Sign Up
+                                </a>
                         </div>
                     </div>
                     <div class="alert alert-secondary mt-3">
