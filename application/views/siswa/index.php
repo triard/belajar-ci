@@ -37,8 +37,19 @@
                         <td>
                             <i>
                                 <a href="<?= base_url(); ?>siswa/deleteSiswa/<?= $sw['Id']; ?>" class="btn btn-danger float-right" onclick="return confirm('Yakin Data Ini Akan Dihapus');"> <i class="fa fa-trash-o" style="font-size:24px"></i> Hapus</a>
+                                <div class="dropdown float-right">
+                                    <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                                        <i class="fa fa-bars"></i>
+                                    </button>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="<?php echo site_url('siswa/detail/' . $sw['Id']) ?>">Detail</a>
+                                        <a class="dropdown-item" href="<?php echo site_url('siswa/edit/' . $sw['Id']) ?>">Edit</a>
+                                    </div>
+                                </div>
+<!-- 
                                 <a href="<?php echo site_url('siswa/edit/' . $sw['Id']) ?>" class="btn btn-warning float-right"><i class="fa fa-edit" style="font-size:24px"></i> Edit</a>
-                                <a href="<?php echo site_url('siswa/detail/' . $sw['Id']) ?>" class="btn btn-primary float-right"><i class="fa fa-info-circle" style="font-size:24px"></i> Detail</a>
+                                <a href="<?php echo site_url('siswa/detail/' . $sw['Id']) ?>" class="btn btn-primary float-right"><i class="fa fa-info-circle" style="font-size:24px"></i> Detail</a> -->
+
                             </i>
                         </td>
                     </tr>
