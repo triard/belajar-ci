@@ -36,7 +36,7 @@ class loginSiswa extends CI_Controller
                 # code...
                 redirect('siswa');
             } else {
-                redirect('user');
+                redirect('user_siswa');
             }
         } else {
             $this->session->set_flashdata('message', 'Password salah');
